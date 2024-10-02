@@ -1,13 +1,22 @@
-<!-- Create a button to trigger the video popup -->
-<button id="video-button">Watch Video</button>
+<!-- index.html -->
 
-<!-- Create a div to hold the video popup -->
-<div id="video-popup" style="display: none;">
-  <!-- Add your video here -->
-  <video id="video" width="640" height="480" controls>
-    <source src="your-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <!-- Add a close button to the popup -->
-  <button id="close-button">Close</button>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Play Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="play-video">Play Video</button>
+    <div id="video-container" style="display: none;">
+        <video id="video" width="800" height="600" controls autoplay>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
