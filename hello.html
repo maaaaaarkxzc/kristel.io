@@ -1,53 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>A Message for Kristel</title>
-<style>
-body {
-  background-color: black;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-}
-h1 {
-  font-size: 1em; /* Smaller heading */
-}
-p {
-  font-size: 2em; /* Larger paragraph text */
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-button {
-  background-color: #555; /* Dark gray button */
-  color: yellow;
-  padding: 1em 2em;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-.video-container {
-  display: none;
-}
-</style>
-</head>
-<body>
-  <h1>HI kristel!</h1>
-  <p>In case nobody told you today, I'll tell you...</p>
-  <button id="play-button">CLICK ME!!!</button>
-  <div class="video-container">
-    <video id="video" width="640" height="480" controls autoplay>
-      <source src="beautiful3.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+<!-- Create a button to trigger the video popup -->
+<button id="video-button">Watch Video</button>
 
-  <script>
-    const button = document.getElementById('play-button');
-    const videoContainer = document.querySelector('.video-container');
-    button.addEventListener('click', () => {
-      videoContainer.style.display = "block";
-      button.style.display = "none";
-    });
-  </script>
-</body>
-</html>
+<!-- Create a div to hold the video popup -->
+<div id="video-popup" style="display: none;">
+  <!-- Add your video here -->
+  <video id="video" width="640" height="480" controls>
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Add a close button to the popup -->
+  <button id="close-button">Close</button>
+</div>
